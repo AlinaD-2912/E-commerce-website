@@ -11,7 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Global Styles */
+
+
+
+/************************************** Global Styles ***********************************************************/
 
 h1 {
   font-size: 50px;
@@ -78,7 +81,9 @@ body {
   width: 100%;
 }
 
-/* HEADER */
+
+
+/******************************************** HEADER *********************************************************************/
 
 #header {
   display: flex;
@@ -129,7 +134,16 @@ body {
   left: 20px;
 }
 
-/* Home Page */
+
+#mobile {
+  display: none;
+}
+
+#close {
+  display: none;
+}
+
+/*********************************************** Home Page ******************************************************/
 
 #hero {
   background-image: url("img/hero4.png");
@@ -165,7 +179,9 @@ body {
 
 }
 
-/* Above feature boxes */
+
+
+/************************************************* Above feature boxes *******************************************/
 
 #feature {
   margin: 0 auto;
@@ -225,7 +241,9 @@ body {
   background-color: #fff2e5;
 }
 
-/* Featured Products */
+
+
+/******************************************** Featured Products ***************************************************/
 
 #product1 {
   text-align: center;
@@ -308,7 +326,7 @@ body {
 
 
 
-/* Banner */
+/**************************************************** Banner ***********************************************************/
 
 #banner {
   display: flex;
@@ -395,7 +413,8 @@ body {
 }
 
 
-/* 3 Banners  */
+
+/********************************************************* 3 Banners  *********************************************/
 
 #banner3 {
   display: flex;
@@ -420,11 +439,11 @@ body {
 }
 
 #banner3 .banner-box2 {
-    background-image: url("img/banner/b4.jpg");
+  background-image: url("img/banner/b4.jpg");
 }
 
 #banner3 .banner-box3 {
-    background-image: url("img/banner/b18.jpg");
+  background-image: url("img/banner/b18.jpg");
 }
 
 #banner3 h2 {
@@ -440,7 +459,7 @@ body {
 }
 
 
-/* Newsletter */
+/************************************************* Newsletter *****************************************************/
 
 #newsletter {
   display: flex;
@@ -496,7 +515,7 @@ body {
 }
 
 
-/* Footer */
+/********************************************** Footer *********************************************************/
 
 footer {
   display: flex;
@@ -546,12 +565,12 @@ footer .follow i {
   cursor: pointer;
 }
 
-footer .install .row img{
+footer .install .row img {
   border: 1px solid #088178;
   border-radius: 6px;
 }
 
-footer .install img{
+footer .install img {
   margin: 10px 0 15px 0;
 }
 
@@ -563,4 +582,57 @@ footer a:hover {
 footer .copyright {
   width: 100%;
   text-align: center;
+}
+
+
+
+
+
+
+/*********************************************** MEDIA QUERRY HOMEPAGE ******************************************/
+
+@media (max-width:799px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #E3E6F3;
+    box-shadow: 0 40px 60px;
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+
+  #navbar.active {
+    right: 0px;
+  }
+
+  #navbar li {
+    margin-bottom: 35px;
+  }
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile i {
+    color: #1a1a1a;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  #close {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    text-decoration: none;
+    font-size: 24px;
+  }
 }
